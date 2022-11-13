@@ -4,9 +4,12 @@ use std::env;
 fn main() {
 
     // declare a mutable vector
+    // vectors are growable by default
     let mut numbers: Vec<u64> = Vec::new();
 
     for arg in env::args().skip(1) {
+        // FromStr is a trait that implements method from_str
+        // u64 implements FromStr trait
         numbers.push(u64::from_str(&arg)
             .expect("error parsing argument"));
     }
