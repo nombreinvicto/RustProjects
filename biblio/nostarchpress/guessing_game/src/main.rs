@@ -17,6 +17,8 @@ fn main() {
         println!("You guessed: {}", guess);
 
         //shadowing in same scope but to different type
+        // parse can convert to any type, hence you have to
+        // explicitly mention type for guess here
         let guess: u32 = match guess.trim().parse() {
             Ok(num) => num,
             Err(_) => continue
@@ -32,4 +34,4 @@ fn main() {
         }
     }
 }
-
+prod
